@@ -1,147 +1,31 @@
 body {
-  color: #40514e;
+  color: #000;
   margin: 0;
   text-align: center;
   font-family: 'Spectral', serif;
 }
 
-h1 {
-  margin: 50px auto 0 auto;
-  font-size: 5.625rem;
-  font-family: 'Sacramento', cursive;
-  line-height: 2;
-  color: #792808;
-}
-
-h2 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 2.5rem;
-  font-weight: normal;
-  line-height: 2;
-  padding-bottom: 10px;
-  color: #792808;
-}
-
-h3 {
-  font-family: 'Raleway', sans-serif;
-  color: #c55c33;
-}
-
-p {
-  margin-bottom: 30px;
-}
-
-a {
-  color: #c55c33;
-  font-family: 'Raleway', sans-serif;
-}
-
-a:hover {
-  color: #ffffff;
+nav {
+  text-align: left;
 }
 
 hr {
-  border: dotted #f8e5d2 6px;
+  border: solid #1a3a1e 1px;
   border-bottom: none;
-  width: 4%;
-  margin-top: 100px;
 }
 
-.top-cloud {
-  position: absolute;
-  top: 40px;
-  right: 300px;
+a {
+  text-decoration: none;
+  color: #000;
 }
 
-.bottom-cloud {
-  position: absolute;
-  left: 250px;
-  bottom: 300px;
-}
-
-.top-container {
-  background-color: #f8e5d2;
-  position: relative;
-  padding-top: 100px;
-}
-
-.skill-row {
+.container {
   width: 50%;
-  margin: 50px auto;
-  margin-bottom: 100px;
-  text-align: left;
-  line-height: 2;
+  margin: 0 auto;
 }
 
-.tea-p {
-  margin-bottom: 150px;
-}
-
-.profile {
-  width: 50%;
-  margin: 50px auto;
-}
-
-.profile-image {
-  height: 150px;
-}
-
-.computer-image {
-  width: 25%;
-  float: left;
-  margin-right: 30px;
-}
-
-.kettle-image {
-  width: 25%;
-  float: right;
-  margin-left: 30px;
-}
-
-.middle-container {
-  margin: 100px 0px;
-}
-
-.copywrite {
-  padding: 20px 0;
-}
-
-.bottom-container {
-  background-color: #f8e5d2;
-  margin-bottom: 0px;
-  padding: 50px 0 5px;
-}
-
-.butn {
-  -webkit-border-radius: 33;
-  -moz-border-radius: 33;
-  border-radius: 33px;
-  font-family: 'Raleway', sans-serif;
-  color: #792808;
-  font-size: 18px;
-  background: #ffffff;
-  padding: 10px 20px 10px 20px;
-  border: solid #f8e5d2 2px;
-  text-decoration: none;
-}
-
-.butn:hover {
-  background: #f8e5d2;
-  text-decoration: none;
-}
-
-.footer-link {
-  text-decoration: none;
-  position: relative;
-  padding: 10px;
-  top: 10px;
-}
-
-.contact-me {
-  width: 35%;
-  margin: 0px auto;
-}
-
-.contact-p {
-  margin-bottom: 50px;
+.profile-img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
