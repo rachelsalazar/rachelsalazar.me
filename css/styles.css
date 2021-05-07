@@ -24,8 +24,40 @@ a {
   margin: 0 auto;
 }
 
-.profile-img{
+.work-img {
+  width: 600px;
+}
+
+.profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 1020px) {
+  /* For medium screens: */
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .work-img {
+    width: 500px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  /* For small screens: */
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .work-img {
+    width: 400px;
+  }
+
 }
