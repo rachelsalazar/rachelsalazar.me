@@ -26,6 +26,8 @@ a {
 
 .work-img {
   width: 600px;
+  border: 1px solid grey;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .profile-img {
