@@ -5,18 +5,27 @@ body {
   font-family: 'Spectral', serif;
 }
 
-nav {
-  text-align: left;
-}
-
 hr {
-  border: solid #1a3a1e 1px;
+  border: 2px solid rgb(212, 212, 212);
   border-bottom: none;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+a:hover {
+  color:rgb(212, 212, 212);
+}
+
+img {
+  box-shadow: 10px 10px 5px rgb(212, 212, 212);
+  border: 2px solid #fff;
+}
+
+.navbar-brand {
+  margin-left: 10px;
 }
 
 .container {
@@ -26,14 +35,27 @@ a {
 
 .work-img {
   width: 600px;
-  border: 1px solid grey;
-  box-shadow: 10px 10px 5px grey;
+  border-radius: 25px;
 }
 
 .profile-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+.form-control {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.form-group:focus, .form-control:focus {
+  box-shadow: none;
+  border: 2px solid rgb(212, 212, 212);
+}
+
+.message {
+  height: 200px;
 }
 
 @media only screen and (max-width: 1020px) {
