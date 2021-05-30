@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .home {
     background-color: lightpink;
     display: flex;
@@ -12,7 +14,7 @@
             border-top-left-radius: 50%;
             height: 80%;
             width: 100%;
-            background-color: plum;
+            background-color: lightblue;
             margin-bottom: 0;
 
             img {
@@ -37,6 +39,29 @@
                 margin-top: 30px;
                 margin-left: -150px;
                 position: absolute;
+            }
+
+            h3 {
+                color: $mainColor;
+                position: absolute;
+                margin-top: 115px;
+                font-size: 28px;
+                font-weight: 300;
+                text-align: center;
+                line-height: 50px;
+                margin-left: -65px;
+            }
+
+            .ityped-cursor {
+                animation: blink 1.1s infinite;
+            }
+
+            @keyframes blink {
+
+                
+                50% {
+                    opacity: 0;
+                }
             }
         }
 
@@ -63,14 +88,18 @@
             h3 {
                 font-size: 30px;
                 font-weight: 300;
+                line-height: 65px;
 
                 .dev {
-                    cursor: none;
-                    line-height: 65px;
+                    cursor: pointer;
 
                     pre {
                         display: inline;
                     }
+                }
+
+                .dev:hover {
+                    opacity: 60%;
                 }
             }
     
