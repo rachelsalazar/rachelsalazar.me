@@ -1,3 +1,37 @@
+@import "../../global.scss";
+
 .projects {
     background-color: plum;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+    h1 {
+        font-size: 50px;
+        margin: 50px;
+    }
+
+    .container {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        color: $mainColor;
+
+        .item {
+            background-color: white;
+            width: 350px;
+            height: 200px;
+            border-radius: 20px;
+            border: 2px #524d3a solid;
+            box-shadow: 10px 10px 20px #524d3a;
+            margin: 10px 20px;
+
+            img {
+                width: 250px;
+            }
+        }
+    }
 }

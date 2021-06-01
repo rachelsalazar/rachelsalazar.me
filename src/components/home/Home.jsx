@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <div className="right">
                 <div className="speechContainer">
-                    <img src="/assets/speech-bubble1.png" alt="thank you for stopping by my website. enjoy your visit"/>
+                    <img src="/assets/speech-bubble1.png" alt="speech bubble"/>
                     <h3>thank you for stopping<br/>by my website.<br/><span ref={textRef}></span></h3>
                 </div>
 
