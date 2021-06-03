@@ -3,23 +3,19 @@ import "./projects.scss";
 export default function Projects() {
     return (
         <div className="projects" id="projects">
-            <h1>projects</h1>
+            <h1>Projects</h1>
             <div className="container">
-                <div className="item">
-                    <img src="/assets/weather-app.png" alt="weather app screenshot"/>
-                    <h3>weather app</h3>
+                <div className="item weather">
+                    <h1>🌞 ⛈</h1>
+                    <h3>Weather App</h3>
                 </div>
-                <div className="item">
-                    <img src="/assets/weather-app.png" alt="weather app screenshot"/>
-                    <h3>developer connector</h3>
+                <div className="item dev">
+                    <h1>💻 📇</h1>
+                    <h3>Developer Connector</h3>
                 </div>
-                <div className="item">
-                    <img src="/assets/weather-app.png" alt="weather app screenshot"/>
-                    <h3>developer connector</h3>
-                </div>
-                <div className="item">
-                    <img src="/assets/weather-app.png" alt="weather app screenshot"/>
-                    <h3>developer connector</h3>
+                <div className="item trabajos">
+                    <h1>🖋 💼</h1>
+                    <h3>Trabajos Esenciales</h3>
                 </div>
             </div>
         </div>
