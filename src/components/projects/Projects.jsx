@@ -1,4 +1,5 @@
 import "./projects.scss";
+import ProjectDetails from "../project-details/ProjectDetails";
 
 export default function Projects() {
     return (
@@ -16,6 +17,9 @@ export default function Projects() {
                 <div className="item trabajos">
                     <h1>🖋 💼</h1>
                     <h3>Trabajos Esenciales</h3>
+                </div>
+                <div className="item-detail">
+                    <ProjectDetails />
                 </div>
             </div>
         </div>

@@ -17,7 +17,7 @@ export default function Home() {
             cursorChar: "✍🏼",
             loop: false,
             startDelay: 1500,
-            strings: ["Enjoy your visit! "] })
+            strings: ["enjoy your visit! "] })
     },[])
 
     function handleClick() {
@@ -34,7 +34,7 @@ export default function Home() {
             <div className="right">
                 <div className="speechContainer">
                     <img src="/assets/speech-bubble1.png" alt="speech bubble"/>
-                    <h3>Thank you for stopping<br/>by my portfolio website.<br/><span ref={textRef}></span></h3>
+                    <h3>Thank you for stopping<br/>by my portfolio. Please<br/><span ref={textRef}></span></h3>
                 </div>
 
                 <div className="wrapper">
