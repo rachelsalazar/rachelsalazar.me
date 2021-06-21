@@ -12,6 +12,7 @@
         .imgContainer {
             margin-top: 20%;
             border-top-left-radius: 50%;
+            border-top-right-radius:  50%;
             height: 80%;
             width: 100%;
             background-color: lightblue;
@@ -29,45 +30,9 @@
         flex: 0.6;
         overflow: visible;
         position: relative;
-        
-
-        .speechContainer {
-            width: 100%;
-
-            img {
-                width: 450px;
-                margin-top: 30px;
-                margin-left: -150px;
-                position: absolute;
-            }
-
-            h3 {
-                color: plum;
-                position: absolute;
-                margin-top: 115px;
-                font-size: 28px;
-                font-weight: 300;
-                text-align: center;
-                line-height: 50px;
-                margin-left: -65px;
-            }
-
-            .ityped-cursor {
-                animation: blink 1.1s infinite;
-            }
-
-            @keyframes blink {
-
-                
-                50% {
-                    opacity: 0;
-                }
-            }
-        }
 
         .wrapper {
-            height: calc(100% - 200px);
-            margin-top: 200px;
+            height: 100%;
             width: 100%;
             display: flex;
             flex-direction: column;

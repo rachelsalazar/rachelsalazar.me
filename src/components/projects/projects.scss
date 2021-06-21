@@ -30,7 +30,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            transition: all 0.5s ease;
+            transition: all 0.3s ease;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 
             h1 {
@@ -46,17 +46,7 @@
             }
 
             &:hover {
-                background-color: palevioletred;
-                width: 335px;
-                height: 205px;
-
-                h1 {
-                    z-index: 0;
-                }
-
-                h3 {
-                    color: white;
-                }
+                box-shadow: 0 0 13px rgba(0, 0, 0, 0.9);
             }
         }
 
@@ -75,6 +65,7 @@
 }
   
   .item-detail {
+    color: black;
     width: 60%;
     height: 75%;
     background-color: white;
@@ -84,3 +75,7 @@
     border: 3px palevioletred solid;
     z-index: -1;
   }
+
+  .active {
+      z-index: 1;
+    }
