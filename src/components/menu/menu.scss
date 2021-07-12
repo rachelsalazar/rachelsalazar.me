@@ -17,6 +17,7 @@
     &.active {
         right: 0;
         background-color: white;
+        border: 3px solid $mainColor;
     }
 
     ul {
@@ -26,7 +27,7 @@
         font-size: 40px;
         font-weight: 300;
         color: $mainColor;
-        width: 60%;
+        width: 80%;
 
         li {
 
@@ -39,7 +40,7 @@
             }
 
             &:hover {
-                font-weight: 500;
+                opacity: 50%;
             }
         }
     }
