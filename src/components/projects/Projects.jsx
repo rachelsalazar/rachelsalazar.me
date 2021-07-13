@@ -29,6 +29,7 @@ export default function Projects() {
     }
     return (
         <div className="projects" id="projects">
+            <img src="assets/pink-squiggle.png" className="squiggle" alt=""/>
             <h1>Projects</h1>
             <div className="container">
                 <div className="item weather" name="weather" onClick={handleClick}>

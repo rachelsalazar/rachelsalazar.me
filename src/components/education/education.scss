@@ -3,6 +3,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+
+    h1 {
+        position: absolute;
+        font-size: 50px;
+        top: 50px;
+        color: white;
+    }
+
+    .arrow {
+        height: 50px;
+        position: absolute;
+        animation: arrowBlink 1.5s infinite;
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏿</text></svg>") 16 0,auto; /*!emojicursor.app*/
+
+        &.left {
+            left: 100px;
+        }
+
+        &.right {
+            right: 100px;
+        }
+
+        @keyframes arrowBlink {
+            50% {
+                opacity: 0;
+            }
+        }
+    }
 
     .slider {
         height: 400px;

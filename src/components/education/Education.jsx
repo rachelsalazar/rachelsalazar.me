@@ -28,6 +28,8 @@ export default function Education() {
                     </div>
                 </div>
             </div>
+            <img src="assets/left-arrow.png" className="arrow left" alt="Left arrow"/>
+            <img src="assets/right-arrow.png" className="arrow right" alt="Right arrow"/>
         </div>
     )
 }
