@@ -56,8 +56,8 @@ export default function Education() {
                 </div>
                 ))}
             </div>
-            <img src="assets/left-arrow.png" className="arrow left" alt="Left arrow" onClick={() => handleClick("left")}/>
-            <img src="assets/right-arrow.png" className="arrow right" alt="Right arrow" onClick={() => handleClick("right")}/>
+            {currentSlide > 0 && <img src="assets/left-arrow.png" className="arrow left" alt="Left arrow" onClick={() => handleClick("left")}/>}
+            {currentSlide < 2 && <img src="assets/right-arrow.png" className="arrow right" alt="Right arrow" onClick={() => handleClick("right")}/>}
         </div>
     )
 }

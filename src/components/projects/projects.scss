@@ -7,6 +7,7 @@
     align-items: center;
     color: white;
     position: relative;
+    
 
     .squiggle {
         display: flex;
@@ -77,16 +78,48 @@
   
   .item-detail {
     color: black;
-    width: 60%;
-    height: 75%;
+    width: 0;
+    height: 0;
+    opacity: 0%;
     background-color: white;
     border-radius: 20px;
     position: absolute;
     margin: auto auto;
     border: 3px solid rgb(218, 62, 218);
     z-index: -1;
-  }
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 
-  .active {
-      z-index: 1;
+    .closeIcon {
+        font: inherit;
+        position: absolute;
+        font-size: 60px;
+        color: plum;
+        top: 8px;
+        right: 10px;
     }
+
+    .closeIcon:hover {
+        opacity: 50%;
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏻</text></svg>") 16 0,auto; /*!emojicursor.app*/
+    }
+
+    h1, p {
+        font-weight: 300;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+.active-project {
+    z-index: 1;
+    width: 750px;
+    height: 450px;
+    opacity: 100%;
+}

@@ -13,7 +13,7 @@
     }
 
     .arrow {
-        height: 60px;
+        height: 70px;
         position: absolute;
         cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏿</text></svg>") 16 0,auto; /*!emojicursor.app*/
 
@@ -37,17 +37,17 @@
 
         @keyframes arrowBlink {
             50% {
-                opacity: 0;
+                opacity: 20%;
             }
         }
     }
 
     .slider {
-        height: 400px;
+        height: 450px;
         display: flex;
         position: absolute;
         left: 0;
-        transition: all 1s ease-out;
+        transition: all 0.7s ease-out;
 
         .container {
             width: 100vw;
@@ -57,13 +57,14 @@
 
             .item {
                 width: 700px;
-                height: 97%;
+                height: 90%;
                 background-color: #fff;
                 border: 3px solid rgb(58, 184, 226);
                 border-radius: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
             }
 
             .left {
@@ -94,6 +95,7 @@
                 p {
                     width: 80%;
                     font-weight: 300;
+                    font-size: 18px;
                 }
 
                 button {

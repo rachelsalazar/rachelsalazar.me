@@ -3,7 +3,7 @@ import "./menu.scss";
 export default function Menu({ menuOpen, setMenuOpen }) {
 
     return (
-        <div className={"menu " + (menuOpen && "active") }>
+        <div className={"menu " + (menuOpen && "activeMenu") }>
             <ul>
                 <li onClick={() => setMenuOpen(false)}>
                     <a href="#home">Home 🏡</a>
