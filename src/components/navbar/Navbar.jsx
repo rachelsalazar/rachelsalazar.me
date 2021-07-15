@@ -5,10 +5,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 export default function Navbar({ menuOpen, setMenuOpen }) {
     return (
-        <div className={"navbar " + ( menuOpen && "active")}>
+        <div className={"navbar " + ( menuOpen && "activeMenu")}>
             <div className="wrapper">
                 <div className="left">
-                    <a href="#home" className="logo">hi. 👋🏼 </a>
+                    <a href="#home" className="logo">hi. <span className="hand">👋🏼</span></a>
                 </div>
                 <div class="icons">
                     <a href="https://www.linkedin.com/in/rachel-e-salazar/" target="blank"><LinkedInIcon /></a>
@@ -16,7 +16,11 @@ export default function Navbar({ menuOpen, setMenuOpen }) {
                     <a href="https://github.com/rachelsalazar" target="blank"><GitHubIcon /></a>
                 </div>
                 <div className="right">
-                    <span className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>🍔</span>
+                    <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                      <span className="line1"></span>
+                      <span className="line2"></span>
+                      <span className="line3"></span>
+                    </div>
                 </div>
             </div>
         </div>

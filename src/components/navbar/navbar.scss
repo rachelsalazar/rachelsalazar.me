@@ -1,65 +1,130 @@
 @import "../../global.scss";
 
 .navbar {
-    width: 100%;
-    height: 75px;
-    background-color: white;
-    color: $mainColor;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    transition: all 0.7s ease;
+  width: 100%;
+  height: 75px;
+  background-color: white;
+  color: $mainColor;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  transition: all 0.7s ease;
 
-    .wrapper {
-        padding: 10px 30px;
+  .wrapper {
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+
+    .left {
+
+      flex: 0.3333;
+
+      .logo {
+          font-size: 40px;
+          font-weight: 700;
+          text-decoration: none;
+          color: inherit;
+          position: relative;
+          cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏽</text></svg>") 16 0,auto; /*!emojicursor.app*/
+      }
+
+      .hand {
+        display: inline-block;
+        position: absolute;
+        margin-left: 5px;
+        margin-top: -5px;
+      }
+
+      &:hover {
+        
+        .hand {
+          animation: wave 2.5s infinite;
+          transform-origin: 70% 70%;
+        }
+      }
+
+      @keyframes wave {
+        0% { transform: rotate( 0.0deg) }
+        10% { transform: rotate(14.0deg) }
+        20% { transform: rotate(-8.0deg) }
+        30% { transform: rotate(14.0deg) }
+        40% { transform: rotate(-4.0deg) }
+        50% { transform: rotate(10.0deg) }
+        60% { transform: rotate( 0.0deg) } 
+       100% { transform: rotate( 0.0deg) }
+      }
+    }
+
+    .icons {
+      flex: 0.3333;
+      text-align: center;
+
+      a {
+          margin: 0 10px;
+          color: inherit;
+          text-decoration: none;
+          cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏽</text></svg>") 16 0,auto; /*!emojicursor.app*/
+      }
+
+      img {
+          height: 40px;
+          width: 40px;
+      }
+    }
+
+    .right {
+
+      flex: 0.3333;
+      position: relative;
+
+      .hamburger {
+        width: 32px;
+        height: 25px;
+        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏻</text></svg>") 16 0,auto; /*!emojicursor.app*/
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        float: right;
 
-        .left {
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $mainColor;
+          transform-origin: left;
+          margin-left: 1px;
+          transition: all 0.5s ease;
 
-            flex: 0.3333;
+          &:nth-child(2) {
+            background-color: lightpink;
+          }
 
-            .logo {
-                font-size: 40px;
-                font-weight: 700;
-                text-decoration: none;
-                color: inherit;
-                cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏽</text></svg>") 16 0,auto; /*!emojicursor.app*/
-            }
+          &:last-child {
+            background-color: lightblue;
+          }
         }
-
-        .icons {
-            flex: 0.3333;
-            text-align: center;
-
-            a {
-                margin: 0 10px;
-                color: inherit;
-                text-decoration: none;
-                cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏽</text></svg>") 16 0,auto; /*!emojicursor.app*/
-            }
-
-            img {
-                height: 40px;
-                width: 40px;
-            }
-        }
-
-        .right {
-
-            flex: 0.3333;
-            text-align: right;
-
-            .hamburger {
-                cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏻</text></svg>") 16 0,auto; /*!emojicursor.app*/
-                font-size: 40px;
-            }
-        }
+      }
     }
+  }
 
-    &.activeMenu {
-        background-color: white;
-        color: $mainColor;
-        z-index: 2;
+  &.activeMenu {
+    z-index: 2;
+
+    .hamburger {
+
+      span {
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
     }
+  }
 }
