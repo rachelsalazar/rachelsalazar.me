@@ -45,7 +45,7 @@ export default function Projects() {
 
     return (
         <div className="projects" id="projects">
-            <img src="assets/pink-squiggle.png" className="squiggle" alt=""/>
+            <img src="assets/pink-squiggle.png" className="pink-squiggle" alt=""/>
             <h1>Projects</h1>
             <div className="container">
                 <div className="item weather" name="weather" onClick={() => handleClick('weather')}>
@@ -68,6 +68,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
+            <img src="assets/blue-squiggle.png" className="blue-squiggle" alt=""/>
         </div>
     )
 }
