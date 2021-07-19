@@ -41,6 +41,9 @@ export default function Contact() {
       setToSend({ ...toSend, [e.target.name]: e.target.value });
     };
 
+    let today = new Date();
+    let year = today.getFullYear();
+
     return (
       <div className="contact" id="contact">
         <h1>Contact</h1>
@@ -55,6 +58,9 @@ export default function Contact() {
             <button type="submit">S E N D</button>
           </form>
         }
+        <footer>
+          Rachel Salazar | {year}
+        </footer>
       </div>
     )
 }

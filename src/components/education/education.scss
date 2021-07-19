@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .education {
     background-color: lightblue;
     display: flex;
@@ -11,10 +13,10 @@
         font-size: 50px;
         top: 50px;
         color: white;
-    }
 
-    p {
-      
+        @include mobile {
+          font-size: 40px;
+        }
     }
 
     .green-squiggle {
@@ -35,6 +37,10 @@
         &.left {
             left: 100px;
             animation: arrowBlink 1.5s infinite;
+
+            @include mobile {
+              left: 10px;
+            }
         }
 
         &.left:hover {
@@ -44,6 +50,10 @@
         &.right {
             right: 100px;
             animation: arrowBlink 1.5s infinite;
+
+            @include mobile {
+              right: 10px;
+            }
         }
 
         &.right:hover {
@@ -81,6 +91,11 @@
                 justify-content: center;
                 box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
                 z-index: 1;
+
+                @include mobile {
+                  width: 65%;
+                  height: 80%
+                }
             }
 
             .left {
@@ -89,6 +104,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include mobile {
+                  flex: 0;
+                }
 
                 img {
                     width: 270px;
@@ -103,6 +122,10 @@
                 flex-direction: column;
                 justify-content: center;
 
+                @include mobile {
+                  flex: 1;
+                }
+
                 h3 {
                     font-weight: 400;
                     margin-bottom: 20px;
@@ -112,14 +135,6 @@
                     width: 80%;
                     font-weight: 300;
                     font-size: 18px;
-                }
-
-                button {
-                    border: 2px solid black;
-                    background-color: white;
-                    font-size: 20px;
-                    font-family: "Belgrano", serif;
-                    margin-top: 20px;
                 }
             }
         }
