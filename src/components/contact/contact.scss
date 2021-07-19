@@ -1,3 +1,76 @@
+@import "../../global.scss";
+
 .contact {
-    background-color: lightgreen;
+  background-color: lightgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 50px;
+    color: white;
+  }
+
+  p {
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    margin-top: 30px;
+  }
+
+  form {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    input {
+      width: 300px;
+      height: 30px;
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 10px;
+      border: 3px solid lightpink;
+    }
+
+    textarea {
+      width: 300px;
+      height: 200px;
+      font-size: 16px;
+      font-weight: 300;
+      padding-left: 10px;
+      border: 3px solid lightpink;
+    }
+
+    textarea:focus, input:focus{
+      outline: none;
+    }
+
+    button {
+      width: 150px;
+      height: 30px;
+      color: white;
+      background-color: lightseagreen;
+      border: 3px solid $mainColor;
+      border-radius: 10px;
+
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>📧</text></svg>") 16 0,auto; /*!emojicursor.app*/
+    
+      &:hover {
+        box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+      }
+
+      &:focus {
+        background-color: $mainColor;
+        outline: none;
+        color: lightseagreen;
+        border: 3px solid lightseagreen;        
+      }
+    }
+  }
 }
