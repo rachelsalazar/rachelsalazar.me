@@ -24,6 +24,8 @@
     color: white;
     font-weight: 300;
     margin-top: 70px;
+    text-align: center;
+    width: 85%;
   }
 
   form {
@@ -41,6 +43,10 @@
       font-weight: 300;
       padding-left: 10px;
       border: 3px solid lightpink;
+
+      @include mobile {
+        width: 200px;
+      }
     }
 
     textarea {
@@ -50,6 +56,11 @@
       font-weight: 300;
       padding-left: 10px;
       border: 3px solid lightpink;
+
+      @include mobile {
+        width: 200px;
+        height: 120px;
+      }
     }
 
     textarea:focus, input:focus{
@@ -92,5 +103,29 @@
     display: flex;
     justify-content: center;
     font-weight: 300;
+
+    .icons {
+      display: none;
+    }
+    
+    @include mobile {
+      .icons {
+        display: block;
+        position: absolute;
+        left: 50px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          margin: 0 5px;
+          cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏽</text></svg>") 16 0,auto; /*!emojicursor.app*/
+        }
+      }
+
+      .copyright {
+        position: absolute;
+        right: 50px;
+      }
+    }
   }
 }

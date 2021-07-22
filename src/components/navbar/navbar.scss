@@ -37,6 +37,7 @@
         position: absolute;
         margin-left: 5px;
         margin-top: -5px;
+        width: 50px;
       }
 
       .logo:hover {
@@ -119,7 +120,7 @@
   }
 
   &.activeMenu {
-    z-index: 2;
+    z-index: 999;
 
     .hamburger {
 
