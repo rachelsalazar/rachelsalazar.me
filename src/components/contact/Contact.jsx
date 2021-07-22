@@ -5,7 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-import keys from '../../env/config/keys';
+import keys from '../../env/config/prod';
 
 export default function Contact() {
 
