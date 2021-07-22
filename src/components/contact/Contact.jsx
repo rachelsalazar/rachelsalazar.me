@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import "./contact.scss";
 import { send } from 'emailjs-com';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const serviceID = require('../../config/keys').serviceID;
 const templateID = require('../../config/keys').templateID;
@@ -59,7 +62,12 @@ export default function Contact() {
           </form>
         }
         <footer>
-          Rachel Salazar | {year}
+          <div class="icons">
+            <a href="https://www.linkedin.com/in/rachel-e-salazar/" target="blank"><LinkedInIcon /></a>
+            <a href="https://twitter.com/rach_e_l_" target="blank"><TwitterIcon /></a>
+            <a href="https://github.com/rachelsalazar" target="blank"><GitHubIcon /></a>
+          </div>
+          <div className="copyright">Rachel Salazar | {year} </div>
         </footer>
       </div>
     )

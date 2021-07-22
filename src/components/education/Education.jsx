@@ -11,21 +11,21 @@ export default function Education() {
             image: 'assets/kal.png',
             alt: 'Kal Academy Logo',
             title: 'Full Stack Web Development Bootcamp',
-            desc: 'Kal Academy is dedicated to providing women and underrepresented minorities with the skills and tools they need to thrive in today’s tech industry. 1. Built web application using Angular and Typescript 2. Built real-world full stack application using React and MongoDb 3. Integrated app with React Router and Redux 4. Deployed application to cloud 5. Learned basic and advanced Algorithms and Data Structures'
+            desc: 'Kal Academy provides women and underrepresented minorities with the skills and tools they need to thrive in today’s tech industry. I built web applications using Angular and Typescript and real-world full stack applications using React and MongoDb. I integrated the apps with React Router and Redux and deployed the applications to the cloud. I also learned basic and advanced Algorithms and Data Structures.'
         },
         {
             id: '2',
             image: 'assets/code-fellows.png',
             alt: 'Code Fellows Logo',
-            title: 'Front End Web Development Bootcamp',
-            desc: 'Developed a well-rounded foundation of skills necessary for modern web development. These skills include HTML, CSS, and JavaScript coding; utilizing Git workflow processes, project organization, designing with wireframing and employing introductory Agile development methods.'
+            title: 'Front-End Web Development Bootcamp',
+            desc: 'At Code Fellows I developed a well-rounded foundation of skills necessary for modern front-end web development. These skills include HTML, CSS, JavaScript, and jQuery. I utilized the Git workflow processes, learned project organization, designed wireframes and employed Agile development methods.'
         },
         {
             id: '3',
             image: 'assets/london-app.png',
             alt: 'London App Brewery Logo',
             title: 'Full Stack Web Development Certificate',
-            desc: 'Topics Learned: Front-End Web Development, HTML 5, CSS 3, Bootstrap 4, Javascript ES6, DOM Manipulation, jQuery, Bash Command Line, Git, GitHub and Version Control, Backend Web Development, Node.js, NPM, Express.js, EJS, REST, APIs, Databases, SQL, MongoDB, Mongoose, Authentication, Firebase, React.js, React Hooks, Web Design, Deployment with GitHub Pages, Heroku and MongoDB Atlas'
+            desc: 'This Udemy certificate program cemented my skills in HTML 5, CSS 3, Bootstrap 4, Javascript ES6, DOM Manipulation, jQuery, Bash Command Line, Git, GitHub and Version Control, Node.js, NPM, Express.js, EJS, REST, APIs, Databases, SQL, MongoDB, Mongoose, Authentication and Authorization, React.js, React Hooks, Web Design, Deployment with GitHub Pages, Heroku and MongoDB Atlas.'
         },
     ];
 
@@ -41,14 +41,14 @@ export default function Education() {
                 {data.map((d) => (
                     <div className="container">
                     <div className="item">
-                        <div className="left">
+                        <div className="top">
                             <div className="leftContainter">
                                 <div className="imgContainer">
                                     <img src={d.image} alt={d.alt}/>
                                 </div>
                             </div>
                         </div>
-                        <div className="right">
+                        <div className="bottom">
                             <h3>{d.title}</h3>
                             <p>{d.desc}</p>
                         </div>

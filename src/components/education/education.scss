@@ -41,6 +41,10 @@
             @include mobile {
               left: 10px;
             }
+
+            @include ipad {
+              left: 30px;
+            }
         }
 
         &.left:hover {
@@ -53,6 +57,10 @@
 
             @include mobile {
               right: 10px;
+            }
+
+            @include ipad {
+              right: 30px;
             }
         }
 
@@ -89,54 +97,76 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
                 z-index: 1;
 
                 @include mobile {
                   width: 65%;
-                  height: 80%
+                  height: 80%;
+                  margin-top: 50px;
+                }
+
+                @include ipad {
+                  width: 65%;
+                  height: 80%;
+                  margin-top: 50px;
                 }
             }
 
-            .left {
-                flex: 5;
+            .top {
+                flex: 4;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                @include mobile {
-                  flex: 0;
-                }
-
                 img {
                     width: 270px;
+
+                    @include mobile {
+                      width: 200px;
+                    }
                 }
             }
 
-            .right {
-                flex: 7;
+            .bottom {
+                flex: 8;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
 
-                @include mobile {
-                  flex: 1;
-                }
-
                 h3 {
                     font-weight: 400;
-                    margin-bottom: 20px;
+                    height: 50px;
+                    text-align: center;
+                    padding-left: 5px;
+                    padding-right: 5px;
+
+                    @include mobile {
+                      height: 120px;
+                    }
+
+                    @include ipad {
+                      height: 50px;
+                    }
                 }
 
                 p {
-                    width: 80%;
+                    width: 90%;
                     font-weight: 300;
                     font-size: 18px;
+                    text-align: center;
+                }
+
+                p::-webkit-scrollbar {
+                  display: none;
                 }
             }
         }
     }
 }
+
+// 495-765

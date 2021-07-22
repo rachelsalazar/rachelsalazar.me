@@ -18,9 +18,11 @@ export default function Home() {
             </div>
             <div className="right">
                 <div className="wrapper">
+                  <div className="intro">
                     <h2>I'm</h2>
                     <h1>Rachel Salazar,</h1>
-                    <h3>a Fullstack Software <span onClick={handleClick} className="dev"> {isClicked ? <pre> 👩🏼‍💻</pre> : <u>Developer.</u>}</span></h3>
+                    <h3>a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre> 👩🏼‍💻</pre> : <u>Developer.</u>}</span></h3>
+                  </div> 
                     <a href="#projects">
                         <img src="/assets/down-arrow.png" alt="down arrow"/>
                     </a>               

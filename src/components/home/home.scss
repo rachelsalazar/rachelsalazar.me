@@ -4,11 +4,6 @@
   background-color: lightpink;
   display: flex;
 
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .left {
     flex: 0.4;
     background-color: lightseagreen;
@@ -31,6 +26,11 @@
           width: 100%;
           left: 0;
         }
+
+        @include ipad {
+          width: 100%;
+          left: 0;
+        }
       }
     }
   }
@@ -48,10 +48,35 @@
       justify-content: center;
       align-items: center;
       color: white;
+      position: relative;
 
       @include mobile {
+        width: 100vw;
+      }
+
+      @include ipad {
+        width: 100vw;
+      }
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin-top: -300px;
+
+        @include mobile {
+          align-items: center;
+          top: 100px;
+          right: 0px;
+          position: absolute;
+          text-align: center;
+          width: 100vw;
+        }
+
+        @include ipad {
+          position: absolute;
+          top: 100px;
+        }
       }
 
       h1 {
@@ -102,7 +127,7 @@
 
         @include mobile {
           bottom: 20px;
-          left: 38%;
+          left: 43%;
         }
 
         img {
