@@ -49,7 +49,7 @@ export default function Contact() {
 
     return (
       <div className="contact" id="contact">
-        <h1>Contact</h1>
+        <h1>Contact ✍🏼</h1>
         <p>{message}</p>
         {submitEmail ? 
           ""

@@ -144,13 +144,16 @@
                     text-align: center;
                     padding-left: 5px;
                     padding-right: 5px;
+                    margin-top: -100px;
 
                     @include mobile {
                       height: 120px;
+                      margin-top: 0px;
                     }
 
                     @include ipad {
                       height: 50px;
+                      margin-top: 0px;
                     }
                 }
 
