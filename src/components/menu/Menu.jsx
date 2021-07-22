@@ -15,7 +15,10 @@ export default function Menu({ menuOpen, setMenuOpen }) {
                     <a href="#education">Education 📚</a>
                 </li>
                 <li onClick={() => setMenuOpen(false)}>
-                    <a href="#contact">Contact 📨</a>
+                    <a href="#contact">Contact ✍🏼</a>
+                </li>
+                <li>
+                    <a href="/assets/rachel-salazar-resume.pdf" target="_blank">Resume 📄</a>
                 </li>
             </ul>
         </div>

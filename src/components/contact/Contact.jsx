@@ -5,9 +5,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-const serviceID = require('../../config/keys').serviceID;
-const templateID = require('../../config/keys').templateID;
-const userID = require('../../config/keys').userID;
+import keys from '../../env/config/keys';
 
 export default function Contact() {
 
@@ -27,10 +25,10 @@ export default function Contact() {
       setMessage("Thank you for your message! I'll email you back ASAP :)")
 
       send(
-        serviceID,
-        templateID,
+        keys.serviceID,
+        keys.templateID,
         toSend,
-        userID
+        keys.userID
       )
         .then((response) => {
           console.log('SUCCESS!', response.status, response.text);
