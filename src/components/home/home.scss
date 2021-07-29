@@ -1,61 +1,105 @@
 @import "../../global.scss";
 
 .home {
-  background-color: lightpink;
   display: flex;
+  height: calc(100vh - 75px);
+
+  @include ipad {
+    flex-direction: column;
+  }
+  @include mobile {
+    flex-direction: column;
+    min-height: -webkit-fill-available;
+  }
 
   .left {
-    flex: 0.4;
-    background-color: lightseagreen;
+    flex: 0.5;
     overflow: hidden;
+    position: relative;
+    animation: fadeIn 2s;
+    z-index: 1;
+
+    @include ipad {
+      flex: 0.7;
+    }
+    @include mobile {
+      flex: 0.7;
+    }
 
     .imgContainer {
-      margin-top: 20%;
-      border-top-left-radius: 50%;
-      border-top-right-radius:  50%;
-      height: 100%;
-      background-color: lightblue;
-      margin-bottom:0;
+      position: absolute;
+      width: 70%;
+      height: 543px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 60px;
+      overflow: hidden;
+      border-radius: 10px;
+      background-image: linear-gradient($mainColor, lightblue);
+
+      @include ipad {
+        height: 80%;
+      }
+      @include mobile {
+        height: 80%;
+        top: 30px;
+      }
 
       img {
-        width: 40%;
-        bottom: 0px;
         position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
 
-        @include mobile {
-          width: 100%;
-          left: 0;
-        }
+      
+    }
+    .triangle-left {
+      position: absolute;
+      top: 20px;
+      left: 5px;
+      width: 220px;
+      height: 250px;
+      background-image: linear-gradient(lightblue, lightpink);
+      clip-path: polygon(76% 0, 0 100%, 100% 75%);
 
-        @include ipad {
-          width: 100%;
-          left: 0;
-        }
+      @include mobile {
+        width: 50%;
+        height: 50%;
+        clip-path: polygon(80% 30%, 0 0, 10% 100%);
       }
     }
   }
 
   .right {
-    flex: 0.6;
+    flex: 0.5;
     overflow: visible;
     position: relative;
+    animation: fadeIn 2s;
+    z-index: 1;
+
+    @include ipad {
+      flex: 0.3;
+    }
+    @include mobile {
+      flex: 0.3;
+    }
 
     .wrapper {
       height: 100%;
       width: 100%;
+      right: 50px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
+      color: lightblue;
       position: relative;
 
-      @include mobile {
-        width: 100vw;
-      }
-
       @include ipad {
-        width: 100vw;
+        right: 0px;
+      }
+      @include mobile {
+        right: 0px;
       }
 
       .intro {
@@ -63,47 +107,55 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        @include mobile {
-          align-items: center;
-          top: 100px;
-          right: 0px;
-          position: absolute;
-          text-align: center;
-          width: 100vw;
-        }
+        z-index: 1;
 
         @include ipad {
-          position: absolute;
-          top: 100px;
+          margin-top: -11%;
+          height: 70%;
+          width: 90%;
+        }
+        @include mobile {
+          margin-top: -18%;
+          height: 80%;
+          width: 100%;
         }
       }
 
-      h1 {
-        font-size: 60px;
-        font-weight: 500;
-
-        @include mobile {
-          font-size: 40px;
-        }
+      .rachel {
+        width: 90%;
+        animation: moveUp 3s;
       }
 
       h2 {
         font-size: 35px;
         font-weight: 300;
+        letter-spacing: 3px;
 
+        @include ipad {
+          font-weight: 400;
+          font-size: 45px;
+        }
         @include mobile {
-          font-size: 25px;
+          font-weight: 400;
+          font-size: 30px;
         }
       }
 
       h3 {
         font-size: 30px;
         font-weight: 300;
-        line-height: 65px;
+        line-height: 50px;
+        letter-spacing: 3px;
 
+        @include ipad {
+          font-weight: 400;
+          font-size: 40px;
+          line-height: 60px;
+        }
         @include mobile {
+          font-weight: 400;
           font-size: 20px;
+          letter-spacing: 2px;
           line-height: 30px;
         }
 
@@ -121,13 +173,16 @@
       }
 
       a {
-        bottom: 40px;
-        left: 47%;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-35px);
         position: absolute;
 
+        @include ipad {
+          visibility: hidden;
+        }
         @include mobile {
-          bottom: 20px;
-          left: 43%;
+          visibility: hidden;
         }
 
         img {
@@ -146,6 +201,56 @@
           }
         }
       }
+      .triangle-right {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 33%;
+        background-image: linear-gradient(hotpink, rgb(255, 186, 58));
+        clip-path: polygon(0 15%, 50% 100%, 100% 0);
+        z-index: 0;
+
+        @include ipad {
+          visibility: hidden;
+        }
+        @include mobile {
+          visibility: hidden;
+        }
+      }
     }
+  }
+
+  .triangle-bottom {
+    @include ipad {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-image: linear-gradient(hotpink, rgb(255, 186, 58));
+      height: calc(100vh - 75px);
+      clip-path: polygon(100% 14%, 0 100%, 94% 94%);
+      z-index: 0;
+      animation: fadeIn 2s;
+    }
+    @include mobile {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-image: linear-gradient(hotpink, rgb(255, 186, 58));
+      height: calc(100vh - 75px);
+      clip-path: polygon(100% 14%, 0 100%, 94% 94%);
+      z-index: 0;
+      animation: fadeIn 2s;
+    }
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
