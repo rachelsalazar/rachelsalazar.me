@@ -11,15 +11,16 @@ import { useState } from "react";
 function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className="app" menuOpen={menuOpen} setMenuOpen={setMenuOpen} onClick={() => menuOpen && setMenuOpen(false)}>
-      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+      <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} darkMode={darkMode}/>
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} darkMode={darkMode}/>
       <div className="sections">
         <Home />
-        <Projects />
-        <Education />
+        <Projects darkMode={darkMode} setDarkMode={setDarkMode}/>
+        <Education darkMode={darkMode} setDarkMode={setDarkMode}/>
         <Skills />
         <Contact />
       </div>

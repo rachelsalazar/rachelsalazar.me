@@ -3,7 +3,7 @@ import { useState } from "react";
 import CloseIcon from '@material-ui/icons/Close';
 import Zoom from 'react-reveal/Zoom';
 
-export default function Projects() {
+export default function Projects({darkMode, setDarkMode}) {
 
     const [click, setClick] = useState(false);
     const [title, setTitle] = useState('');
@@ -50,9 +50,12 @@ export default function Projects() {
         click ? setClick(false) : setClick(true);
     }
 
+    const handleMouseOver = () => {
+      setDarkMode(false);
+    }
 
     return (
-        <div className="projects" id="projects">
+        <div className={"projects " + ( darkMode && "dark-mode")} id="projects" onMouseOver={handleMouseOver}>
             <Zoom >
               <h1>Projects</h1>
             </Zoom>
