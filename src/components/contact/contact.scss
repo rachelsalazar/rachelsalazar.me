@@ -7,6 +7,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  height: calc(100vh - 75px);
 
   h1 {
     font-size: 50px;
@@ -43,6 +44,7 @@
       font-weight: 300;
       padding-left: 10px;
       border: 3px solid lightpink;
+      border-radius: 10px;
 
       @include mobile {
         width: 200px;
@@ -56,6 +58,7 @@
       font-weight: 300;
       padding-left: 10px;
       border: 3px solid lightpink;
+      border-radius: 10px;
 
       @include mobile {
         width: 200px;

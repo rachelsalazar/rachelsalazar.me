@@ -1,5 +1,6 @@
 import "./home.scss"
 import { useState } from "react";
+import Swing from 'react-reveal/Swing';
 
 export default function Home() {
 
@@ -15,17 +16,22 @@ export default function Home() {
                 <div className="imgContainer">
                     <img src="/assets/profile-pic.png" alt="rachel salazar"/>
                 </div>
-                <div className="triangle-left"></div>
+                <Swing delay={2000}>
+                  <div className="triangle-left"></div>
+                </Swing>
             </div>
             <div className="right">
                 <div className="wrapper">
-                  <div className="intro">
+                  <span className="intro">
                     <h2>I'm</h2>
-                    <img className="rachel" src="assets/rachel-salazar.png" alt="" />
-                    {/* <h1>Rachel Salazar,</h1> */}
+                    <span className="drop-shadow">
+                      <img className="rachel" src="assets/rachel-salazar.png" alt="" />
+                    </span>
                     <h3>a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre> 👩🏼‍💻</pre> : <u>Developer.</u>}</span></h3>
-                  </div>
-                  <div className="triangle-right"></div> 
+                  </span>
+                  <Swing delay={3000}>
+                      <div className="triangle-right"></div>
+                  </Swing>
                     <a href="#projects">
                         <img src="/assets/down-arrow.png" alt="down arrow"/>
                     </a>               

@@ -3,6 +3,7 @@ import Menu from "./components/menu/Menu"
 import Home from "./components/home/Home";
 import Projects from "./components/projects/Projects";
 import Education from "./components/education/Education";
+import Skills from "./components/skills/Skills"
 import Contact from "./components/contact/Contact";
 import "./app.scss";
 import { useState } from "react";
@@ -19,6 +20,7 @@ function App() {
         <Home />
         <Projects />
         <Education />
+        <Skills />
         <Contact />
       </div>
     </div>

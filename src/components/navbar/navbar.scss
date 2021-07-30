@@ -9,6 +9,7 @@
   top: 0;
   z-index: 2;
   transition: all 0.7s ease;
+  border-bottom: 3px solid $mainColor;
 
   .wrapper {
     padding: 12px 30px;
@@ -25,6 +26,7 @@
 
       .logo {
           font-size: 40px;
+          letter-spacing: 5px;
           font-weight: 700;
           text-decoration: none;
           color: inherit;
