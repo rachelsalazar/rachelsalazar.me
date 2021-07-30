@@ -1,6 +1,7 @@
 import "./projects.scss";
 import { useState } from "react";
 import CloseIcon from '@material-ui/icons/Close';
+import Zoom from 'react-reveal/Zoom';
 
 export default function Projects() {
 
@@ -40,7 +41,7 @@ export default function Projects() {
             setTitle(data[1].title);
             setDesc(data[1].desc);
             setTech(data[1].technology);
-        } else if (project === 'trabajos') {
+        } else if (project === 'to-do') {
             setTitle(data[2].title);
             setDesc(data[2].desc);
             setTech(data[2].technology);
@@ -52,21 +53,37 @@ export default function Projects() {
 
     return (
         <div className="projects" id="projects">
-            <img src="assets/pink-squiggle.png" className="pink-squiggle" alt=""/>
-            <h1>Projects</h1>
-            <div className="container">
-                <div className="item weather" name="weather" onClick={() => handleClick('weather')}>
-                    <h1 className="emojis weather">🌞 ⛈</h1>
-                    <h3 className="weather">Weather App</h3>
-                </div>
-                <div className="item dev" onClick={() => handleClick('dev')}>
-                    <h1 className="emojis dev">💻 📇</h1>
-                    <h3 className="dev">Developer Connector</h3>
-                </div>
-                <div className="item trabajos" onClick={() => handleClick('trabajos')}>
-                    <h1 className="emojis trabajos">📝 ✔️</h1>
-                    <h3 className="trabajos">To-Do List</h3>
-                </div>
+            <Zoom >
+              <h1>Projects</h1>
+            </Zoom>
+            <Zoom>
+              <img className="click" src="assets/click.png" alt="click arrow" />
+            </Zoom>
+              <div className="container">
+                <Zoom>
+                  <div className="item weather" name="weather" onClick={() => handleClick('weather')}>
+                      <h1 className="emojis weather">🌞 ⛈</h1>
+                      <h3 className="weather">Weather App</h3>
+                  </div>
+                </Zoom>
+                <Zoom>
+                  <div className="item dev" onClick={() => handleClick('dev')}>
+                      <h1 className="emojis dev">💻 📇</h1>
+                      <h3 className="dev">Developer Connector</h3>
+                  </div>
+                </Zoom>
+                <Zoom>
+                  <div className="item to-do" onClick={() => handleClick('to-do')}>
+                      <h1 className="emojis to-do">📝 ✔️</h1>
+                      <h3 className="to-do">To-Do List</h3>
+                  </div>
+                </Zoom>
+                <Zoom>
+                  <div className="item which-bin" onClick={() => handleClick('which-bin')}>
+                      <h1 className="emojis which-bin">♻️ 🗑</h1>
+                      <h3 className="which-bin">Which Bin?</h3>
+                  </div>
+                </Zoom>
                 <div className={click ? "item-detail active-project" : "item-detail"}>
                   <CloseIcon className="closeIcon" onClick={() => handleClick()}/>
                     <div className="detail">
@@ -76,7 +93,7 @@ export default function Projects() {
                     </div>
                 </div>
             </div>
-            <img src="assets/blue-squiggle.png" className="blue-squiggle" alt=""/>
+            {/* <img src="assets/blue-squiggle.png" className="blue-squiggle" alt=""/> */}
         </div>
     )
 }

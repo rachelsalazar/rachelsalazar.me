@@ -1,41 +1,55 @@
 @import "../../global.scss";
 
 .projects {
-    background-color: plum;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: lightblue;
     position: relative;
+
+    .click {
+      width: 150px;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+
+      @include mobile {
+        top: 60px;
+        right: 70px;
+      }
+    }
     
 
-    .pink-squiggle {
-        display: flex;
-        width: 60%;
-        position: absolute;
-        top: -4px;
-        right: 0;
-        z-index: 0;
+    // .pink-squiggle {
+    //     display: flex;
+    //     width: 60%;
+    //     position: absolute;
+    //     top: -4px;
+    //     right: 0;
+    //     z-index: 0;
 
-        @include mobile {
-          width: 100%;
-        }
-    }
+    //     @include mobile {
+    //       width: 100%;
+    //     }
+    // }
 
-    .blue-squiggle {
-      display: flex;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 0;
-    }
+    // .blue-squiggle {
+    //   display: flex;
+    //   width: 100%;
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   z-index: 0;
+    // }
 
     h1 {
         font-size: 50px;
-        margin-top: 50px;
-        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 50px;
         z-index: 1;
+        letter-spacing: 10px;
+        
 
         @include mobile {
           font-size: 40px;
@@ -44,34 +58,32 @@
     }
 
     .container {
-        width: 70%;
+        width: 80%;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         z-index: 1;
+        margin-bottom: 100px;
 
         @include mobile {
-          width: 100%;
+          width: 90%;
+          margin-bottom: 50px;
+          margin-top: 100px;
         }
 
         .item {
-            background-color: white;
+            background-image: linear-gradient(to bottom right, lightblue, plum);
             width: 330px;
             height: 200px;
-            border: 3px solid rgb(218, 62, 218);
-            border-radius: 20px;
-            margin: 10px 20px;
+            border-radius: 10px;
+            margin: 30px 25px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             transition: all 0.3s ease;
-
-            @include mobile {
-              width: 250px;
-              height: 120px;
-            }
+            box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5);
 
             .emojis {
                 font-size: 50px;
@@ -86,13 +98,13 @@
                 position: absolute;
                 font-size: 20px;
                 font-weight: 300;
-                color: black;
+                color: white;
                 margin-top: 70px;
             }
+        }
 
-            &:hover {
-                box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
-            }
+        .item:hover {
+          box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.7);
         }
 
         .weather {
@@ -103,9 +115,12 @@
             cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👨🏿‍💻</text></svg>") 16 0,auto; /*!emojicursor.app*/
         }
 
-        .trabajos {
+        .to-do {
             cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>📄</text></svg>") 16 0,auto; /*!emojicursor.app*/
         }
+        .which-bin {
+          cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚮</text></svg>") 16 0,auto; /*!emojicursor.app*/
+      }
     }
 }
   
@@ -115,10 +130,9 @@
     height: 0;
     opacity: 0%;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     position: absolute;
     margin: auto auto;
-    border: 3px solid rgb(218, 62, 218);
     z-index: -1;
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
     transition: all 0.2s ease;
@@ -175,7 +189,7 @@
 .active-project {
     z-index: 1;
     width: 750px;
-    height: 450px;
+    height: 400px;
     opacity: 100%;
 
     @include mobile {

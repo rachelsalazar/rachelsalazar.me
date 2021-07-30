@@ -1,7 +1,16 @@
 $mainColor: #fadd76;
 
 $mobileWidth: 767px;
-$ipadWidth: 1075px;
+$ipadWidth: 1024px;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
 
 @mixin mobile {
   @media (max-width:#{$mobileWidth}) {
