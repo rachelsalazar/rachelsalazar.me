@@ -3,7 +3,7 @@ import "./menu.scss";
 export default function Menu({ menuOpen, setMenuOpen, darkMode }) {
 
     return (
-        <div className={"menu " + (menuOpen && "activeMenu") + ( darkMode && " dark-mode") }>
+        <div className={"menu " + (menuOpen && "activeMenu ") + ( darkMode && " dark-mode") }>
             <ul>
                 <li onClick={() => setMenuOpen(false)}>
                     <a href="#home">Home 🏡</a>
@@ -15,7 +15,7 @@ export default function Menu({ menuOpen, setMenuOpen, darkMode }) {
                     <a href="#education">Education 📚</a>
                 </li>
                 <li onClick={() => setMenuOpen(false)}>
-                    <a href="#skills">Skills 📚</a>
+                    <a href="#skills">Skills 💻</a>
                 </li>
                 <li onClick={() => setMenuOpen(false)}>
                     <a href="#contact">Contact ✍🏼</a>

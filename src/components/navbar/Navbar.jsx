@@ -5,7 +5,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 export default function Navbar({ menuOpen, setMenuOpen, darkMode }) {
     return (
-        <div className={"navbar " + ( menuOpen && "activeMenu") + ( darkMode && " dark-mode")}>
+        <div className={"navbar " + ( menuOpen && "activeMenu ") + ( darkMode && " dark-mode")}>
             <div className="wrapper">
                 <div className="left">
                     <a href="#home" className="logo">hi. <span className="hand">👋🏼</span></a>

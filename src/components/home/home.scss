@@ -54,22 +54,6 @@
 
       
     }
-
-    .triangle-left {
-      position: absolute;
-      top: 20px;
-      left: 5px;
-      width: 220px;
-      height: 250px;
-      background-image: linear-gradient(lightblue, lightpink);
-      clip-path: polygon(76% 0, 0 100%, 100% 75%);
-
-      @include mobile {
-        width: 50%;
-        height: 50%;
-        clip-path: polygon(80% 30%, 0 0, 10% 100%);
-      }
-    }
   }
 
   .right {
@@ -110,10 +94,6 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
-
-        .drop-shadow {
-          filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
-        }
 
         @include ipad {
           margin-top: -11%;
@@ -207,46 +187,6 @@
           }
         }
       }
-
-      .triangle-right {
-        position: absolute;
-        bottom: 0;
-        width: 50%;
-        height: 33%;
-        background-image: linear-gradient(hotpink, rgb(255, 186, 58));
-        clip-path: polygon(0 15%, 50% 100%, 100% 0);
-        z-index: 0;
-
-        @include ipad {
-          visibility: hidden;
-        }
-        @include mobile {
-          visibility: hidden;
-        }
-      }
-    }
-  }
-
-  .triangle-bottom {
-    @include ipad {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background-image: linear-gradient(hotpink, rgb(255, 186, 58));
-      height: calc(100vh - 75px);
-      clip-path: polygon(100% 14%, 0 100%, 94% 94%);
-      z-index: 0;
-      animation: fadeIn 2s;
-    }
-    @include mobile {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background-image: linear-gradient(hotpink, rgb(255, 186, 58));
-      height: calc(100vh - 75px);
-      clip-path: polygon(100% 14%, 0 100%, 94% 94%);
-      z-index: 0;
-      animation: fadeIn 2s;
     }
   }
 }

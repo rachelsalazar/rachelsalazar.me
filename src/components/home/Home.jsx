@@ -16,9 +16,6 @@ export default function Home() {
                 <div className="imgContainer">
                     <img src="/assets/profile-pic.png" alt="rachel salazar"/>
                 </div>
-                <Swing delay={2000}>
-                  <div className="triangle-left"></div>
-                </Swing>
             </div>
             <div className="right">
                 <div className="wrapper">
@@ -28,16 +25,9 @@ export default function Home() {
                       <img className="rachel" src="assets/rachel-salazar.png" alt="" />
                     </span>
                     <h3>a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre> 👩🏼‍💻</pre> : <u>Developer.</u>}</span></h3>
-                  </span>
-                  <Swing delay={3000}>
-                      <div className="triangle-right"></div>
-                  </Swing>
-                    <a href="#projects">
-                        <img src="/assets/down-arrow.png" alt="down arrow"/>
-                    </a>               
+                  </span>            
                 </div>
             </div>
-            <div className="triangle-bottom"></div> 
         </div>
     )
 }
