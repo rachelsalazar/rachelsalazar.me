@@ -1,14 +1,8 @@
 import "./projects.scss";
 import { useState } from "react";
-import CloseIcon from '@material-ui/icons/Close';
 import Zoom from 'react-reveal/Zoom';
 
 export default function Projects({darkMode, setDarkMode}) {
-
-    const [click, setClick] = useState(false);
-    const [title, setTitle] = useState('');
-    const [desc, setDesc] = useState('');
-    const [tech, setTech] = useState('');
 
     const data = [
         {
@@ -31,25 +25,6 @@ export default function Projects({darkMode, setDarkMode}) {
         }
     ];
 
-    function handleClick(project) {
-
-        if (project === 'weather') {
-            setTitle(data[0].title);
-            setDesc(data[0].desc);
-            setTech(data[0].technology);
-        } else if (project === 'dev') {
-            setTitle(data[1].title);
-            setDesc(data[1].desc);
-            setTech(data[1].technology);
-        } else if (project === 'to-do') {
-            setTitle(data[2].title);
-            setDesc(data[2].desc);
-            setTech(data[2].technology);
-        }
-
-        click ? setClick(false) : setClick(true);
-    }
-
     const handleMouseOver = () => {
       setDarkMode(false);
     }
@@ -59,44 +34,23 @@ export default function Projects({darkMode, setDarkMode}) {
             <Zoom >
               <h1>Projects</h1>
             </Zoom>
-            <Zoom>
-              <img className="click" src="assets/click.png" alt="click arrow" />
-            </Zoom>
               <div className="container">
                 <Zoom>
-                  <div className="item weather" name="weather" onClick={() => handleClick('weather')}>
-                      <h1 className="emojis weather">🌞 ⛈</h1>
-                      <h3 className="weather">Weather App</h3>
+                  <div className="item weather" name="weather">
+                      <video controls="true" src="/assets/weather-screen.mov"></video>
                   </div>
                 </Zoom>
                 <Zoom>
-                  <div className="item dev" onClick={() => handleClick('dev')}>
-                      <h1 className="emojis dev">💻 📇</h1>
-                      <h3 className="dev">Developer Connector</h3>
+                  <div className="item to-do">
+                      <video controls="true" src="/assets/to-do-screen.mov"></video>
                   </div>
                 </Zoom>
                 <Zoom>
-                  <div className="item to-do" onClick={() => handleClick('to-do')}>
-                      <h1 className="emojis to-do">📝 ✔️</h1>
-                      <h3 className="to-do">To-Do List</h3>
+                  <div className="item witch-bin">
+                      <video controls="true" src="/assets/witch-bin-screen.mov"></video>
                   </div>
                 </Zoom>
-                <Zoom>
-                  <div className="item which-bin" onClick={() => handleClick('which-bin')}>
-                      <h1 className="emojis which-bin">♻️ 🗑</h1>
-                      <h3 className="which-bin">Which Bin?</h3>
-                  </div>
-                </Zoom>
-                <div className={click ? "item-detail active-project" : "item-detail"}>
-                  <CloseIcon className="closeIcon" onClick={() => handleClick()}/>
-                    <div className="detail">
-                        <h1>{title}</h1>
-                        <p>{desc}</p>
-                        <p className="techs">{tech}</p>
-                    </div>
-                </div>
             </div>
-            {/* <img src="assets/blue-squiggle.png" className="blue-squiggle" alt=""/> */}
         </div>
     )
 }

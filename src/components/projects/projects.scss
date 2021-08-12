@@ -13,41 +13,6 @@
       background-color: rgb(22, 22, 22);
     }
 
-    .click {
-      width: 150px;
-      position: absolute;
-      top: 20px;
-      right: 10px;
-
-      @include mobile {
-        top: 60px;
-        right: 70px;
-      }
-    }
-    
-
-    // .pink-squiggle {
-    //     display: flex;
-    //     width: 60%;
-    //     position: absolute;
-    //     top: -4px;
-    //     right: 0;
-    //     z-index: 0;
-
-    //     @include mobile {
-    //       width: 100%;
-    //     }
-    // }
-
-    // .blue-squiggle {
-    //   display: flex;
-    //   width: 100%;
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 0;
-    //   z-index: 0;
-    // }
-
     h1 {
         font-size: 50px;
         margin-top: 30px;
@@ -78,9 +43,7 @@
         }
 
         .item {
-            background-image: linear-gradient(to bottom right, lightblue, plum);
-            width: 330px;
-            height: 200px;
+            width: 60%;
             border-radius: 10px;
             margin: 30px 25px;
             display: flex;
@@ -89,116 +52,30 @@
             position: relative;
             transition: all 0.3s ease;
             box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5);
-
-            .emojis {
-                font-size: 50px;
-                margin-top: -10px;
-
-                @include mobile {
-                  margin-top: -10px;
-                }
-            }
-
-            h3 {
-                position: absolute;
-                font-size: 20px;
-                font-weight: 300;
-                color: white;
-                margin-top: 70px;
-            }
         }
 
         .item:hover {
           box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.7);
         }
 
-        .weather {
-            cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❄️</text></svg>") 16 0,auto; /*!emojicursor.app*/
+        video:focus {
+          outline: none;
+          border: none;
         }
 
-        .dev {
-            cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👨🏿‍💻</text></svg>") 16 0,auto; /*!emojicursor.app*/
+        .weather {
+            cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❄️</text></svg>") 16 0,auto; /*!emojicursor.app*/
         }
 
         .to-do {
             cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>📄</text></svg>") 16 0,auto; /*!emojicursor.app*/
         }
-        .which-bin {
+        .witch-bin {
           cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚮</text></svg>") 16 0,auto; /*!emojicursor.app*/
-      }
-    }
-}
-  
-  .item-detail {
-    color: black;
-    width: 0;
-    height: 0;
-    opacity: 0%;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    margin: auto auto;
-    z-index: -1;
-    box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
-    transition: all 0.2s ease;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
-    .closeIcon {
-        font: inherit;
-        position: absolute;
-        font-size: 60px;
-        color: plum;
-        top: 8px;
-        right: 10px;
-    }
-
-    .closeIcon:hover {
-        opacity: 50%;
-        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏻</text></svg>") 16 0,auto; /*!emojicursor.app*/
-    }
-
-    .detail {
-      width: 100%;
-    }
-
-    h1 {
-        font-weight: 300;
-        font-size: 40px;
-        margin-top: 70px;
-
-        @include mobile {
-          font-size: 22px;
         }
-    }
 
-    p {
-      font-weight: 300;
-      font-size: 20px;
-      margin-top: 50px;
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-
-      @include mobile {
-        font-size: 18px;
-      }
-    }
-
-    .techs {
-      margin-top: 30px;
-    }
-}
-
-.active-project {
-    z-index: 1;
-    width: 750px;
-    height: 400px;
-    opacity: 100%;
-
-    @include mobile {
-      height: 70%;
-      width: 90%;
+        .witch-bin video {
+          margin-top: 50px;;
+        }
     }
 }
