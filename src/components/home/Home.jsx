@@ -24,7 +24,7 @@ export default function Home() {
                     <span className="drop-shadow">
                       <img className="rachel" src="assets/rachel-salazar.png" alt="" />
                     </span>
-                    <h3>a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre> 👩🏼‍💻</pre> : <u>Developer.</u>}</span></h3>
+                    <h3>a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre>👩🏼‍💻</pre> : <span>Developer.</span>}</span></h3>
                   </span>            
                 </div>
             </div>

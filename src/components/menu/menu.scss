@@ -13,15 +13,17 @@
     align-items: center;
     justify-content: center;
     transition: all 0.7s ease;
-    border-left: 3px solid lightpink;
+    border-left: 3px solid lightgreen;
 
     &.activeMenu {
         right: 0;
         background-color: white;
+        color: black;
     }
 
     &.dark-mode {
       background-color: black;
+      color: white;
     }
 
     ul {
@@ -30,7 +32,6 @@
         list-style: none;
         font-size: 40px;
         font-weight: 300;
-        color: $mainColor;
         width: 80%;
 
         li {
