@@ -3,11 +3,8 @@
 
     .sections {
         width: 100%;
-        // height: calc(100vh - 75px);
         position: relative;
         top: 75px;
-        scroll-behavior: smooth;
-        // scroll-snap-type: y mandatory;
         scrollbar-width: none; //for firefox
         &::-webkit-scrollbar{
             display: none; //other browsers
@@ -15,7 +12,6 @@
 
         > *{
             width: 100%;
-            // height: calc(100vh - 75px);
             scroll-snap-align: start; 
         }
     }

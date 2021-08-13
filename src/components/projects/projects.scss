@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: lightblue;
+    color: black;
     position: relative;
     transition: all 0.7s ease;
 
@@ -18,13 +18,17 @@
         margin-top: 30px;
         margin-bottom: 50px;
         z-index: 1;
-        letter-spacing: 10px;
+        font-weight: 300;
         
 
         @include mobile {
           font-size: 40px;
           overflow-x: visible;
         };
+    }
+
+    h2 {
+      font-weight: 300;
     }
 
     .container {
@@ -54,28 +58,13 @@
             box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5);
         }
 
-        .item:hover {
-          box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.7);
-        }
-
         video:focus {
           outline: none;
           border: none;
         }
 
-        .weather {
-            cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❄️</text></svg>") 16 0,auto; /*!emojicursor.app*/
-        }
-
-        .to-do {
-            cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>📄</text></svg>") 16 0,auto; /*!emojicursor.app*/
-        }
-        .witch-bin {
-          cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚮</text></svg>") 16 0,auto; /*!emojicursor.app*/
-        }
-
-        .witch-bin video {
-          margin-top: 50px;;
+        .which-bin video {
+          margin-top: 50px;
         }
     }
 }

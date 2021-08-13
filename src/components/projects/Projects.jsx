@@ -31,24 +31,25 @@ export default function Projects({darkMode, setDarkMode}) {
 
     return (
         <div className={"projects " + ( darkMode && "dark-mode")} id="projects" onMouseOver={handleMouseOver}>
-            <Zoom >
               <h1>Projects</h1>
-            </Zoom>
               <div className="container">
                 <Zoom>
                   <div className="item weather" name="weather">
                       <video controls="true" src="/assets/weather-screen.mov"></video>
                   </div>
+                  <h2>Weather App</h2>
                 </Zoom>
                 <Zoom>
                   <div className="item to-do">
                       <video controls="true" src="/assets/to-do-screen.mov"></video>
                   </div>
+                  <h2>To-Do List</h2>
                 </Zoom>
                 <Zoom>
-                  <div className="item witch-bin">
-                      <video controls="true" src="/assets/witch-bin-screen.mov"></video>
+                  <div className="item which-bin">
+                      <video controls="true" src="/assets/which-bin-screen.mov"></video>
                   </div>
+                  <h2>Which Bin?</h2>
                 </Zoom>
             </div>
         </div>

@@ -1,14 +1,14 @@
 @import "../../global.scss";
 
 .skills {
-  background-color: white;
+  background-color: rgb(22, 22, 22);
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 
   h1 {
     font-size: 50px;
-    color: plum;
     margin-bottom: 50px;
     z-index: 1;
     letter-spacing: 10px;
