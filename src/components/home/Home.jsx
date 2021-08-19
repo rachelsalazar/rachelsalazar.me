@@ -1,6 +1,5 @@
 import "./home.scss"
 import { useState } from "react";
-import Swing from 'react-reveal/Swing';
 
 export default function Home() {
 

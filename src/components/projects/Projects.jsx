@@ -1,8 +1,7 @@
 import "./projects.scss";
-import { useState } from "react";
 import Zoom from 'react-reveal/Zoom';
 
-export default function Projects({darkMode, setDarkMode}) {
+export default function Projects() {
 
     const data = [
         {
@@ -12,45 +11,44 @@ export default function Projects({darkMode, setDarkMode}) {
           technology: 'Technologies: Typescript, Angular, Node.js, Express.js, HTML, CSS'
         },
         {
-          id: '2',
-          title: '💻 Developer Connector 📇',
-          desc: 'A LinkedIn inspired single-page web application that connects Software Developers through searching capabilities to find other developers in the application. I developed front-end using React enabling developers to have profiles, news feeds, comment on and like posts, etc. I used Passport to authenticate users using JWT and built the back-end database in MongoDB.',
-          technology: 'Technologies: React, JSX, CSS, Node.js, Express.js, MongoDB, Passport.js, JWT, Postman, Redux, Git'
-        },
-        {
-            id: '3',
+            id: '2',
             title: '📝 To-Do List ✔️',
             desc: 'A to-do list inspired by the Google Keep app. I utilized React State Hooks to create dynamic components and persisted the user data in MongoDB. I implemented OAuth and the ability to signin with Google using Passport.js.',
             technology: 'Technologies: React, JSX, CSS, Node.js, Express.js, MongoDB, Heroku, Passport.js'
+        },
+        {
+          id: '3',
+          title: 'Which Bin?',
+          desc: 'A recycling website built with HTML, CSS, and Javascript that helps you figure out if an item should be placed in the Garbage, Recycle Bin, or Compost Bin.',
+          technology: ''
         }
     ];
 
-    const handleMouseOver = () => {
-      setDarkMode(false);
-    }
-
     return (
-        <div className={"projects " + ( darkMode && "dark-mode")} id="projects" onMouseOver={handleMouseOver}>
+        <div className="projects" id="projects">
               <h1>Projects</h1>
               <div className="container">
                 <Zoom>
+                  <h2>{data[0].title}</h2>
                   <div className="item weather" name="weather">
                       <video controls="true" src="/assets/weather-screen.mov"></video>
                   </div>
-                  <h2>Weather App</h2>
-                </Zoom>
+                </Zoom>                
+                <p>{data[0].desc}</p>
                 <Zoom>
+                  <h2>{data[1].title}</h2>
                   <div className="item to-do">
                       <video controls="true" src="/assets/to-do-screen.mov"></video>
                   </div>
-                  <h2>To-Do List</h2>
-                </Zoom>
+                </Zoom>                
+                <p>{data[1].desc}</p>
                 <Zoom>
+                  <h2>{data[2].title}</h2>
                   <div className="item which-bin">
                       <video controls="true" src="/assets/which-bin-screen.mov"></video>
-                  </div>
-                  <h2>Which Bin?</h2>
-                </Zoom>
+                  </div>                  
+                </Zoom>                
+                <p>{data[2].desc}</p>
             </div>
         </div>
     )

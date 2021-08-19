@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, } from 'react';
 import "./education.scss";
 import Reveal from 'react-reveal/Reveal';
 
-export default function Education({darkMode, setDarkMode}) {
+export default function Education() {
   
     const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -35,13 +35,9 @@ export default function Education({darkMode, setDarkMode}) {
         setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
     }
 
-    const handleMouseOver = () => {
-      setDarkMode(true);
-    }
-
     return (
       <Reveal>
-        <div className={"education " + (darkMode && "dark-mode")} id="education" onMouseOver={handleMouseOver}>
+        <div className="education" id="education">
             <h1>Education</h1>
             <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw)`}}>
                 {data.map((d) => (

@@ -11,14 +11,6 @@
     height: calc(100vh - 75px);
     transition: all 0.7s ease;
 
-    &.dark-mode {
-      background-color: rgb(22, 22, 22);
-
-      h1 {
-        color: white;
-      }
-    }
-
     h1 {
         position: absolute;
         font-size: 50px;
@@ -173,5 +165,3 @@
         }
     }
 }
-
-// 495-765

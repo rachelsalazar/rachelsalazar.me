@@ -1,8 +1,8 @@
 @import "../../global.scss";
 
 .skills {
-  background-color: rgb(22, 22, 22);
-  color: white;
+  background-color: white;
+  color: black;
   height: calc(100vh - 75px);
 
   h1 {
@@ -28,13 +28,10 @@
   img {
     width: 10%;
     height: 10%;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
-  }
-
-  .white-back {
-    background-color: white;
+    box-shadow: 0 0 15px 0.5px rgba(0, 0, 0, 0.5);
   }
 }
