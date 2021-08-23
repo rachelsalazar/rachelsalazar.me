@@ -11,7 +11,7 @@
 
     h1 {
         font-size: 50px;
-        margin-top: 30px;
+        margin-top: 80px;
         margin-bottom: 50px;
         z-index: 1;
         font-weight: 300;
@@ -35,7 +35,6 @@
         flex-direction: column;
         flex-wrap: wrap;
         z-index: 1;
-        margin-bottom: 100px;
 
         @include mobile {
           width: 90%;
