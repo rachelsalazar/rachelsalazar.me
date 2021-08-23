@@ -25,19 +25,19 @@
       }
 
       .logo {
-          font-size: 40px;
+          font-size: 50px;
           font-weight: 300;
           text-decoration: none;
-          color: black;
+          color: $mainColor;
           position: relative;
           cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏽</text></svg>") 16 0,auto; /*!emojicursor.app*/
       }
 
       .hand {
         display: inline-block;
+        font-size: 40px;
         position: absolute;
         margin-left: 5px;
-        margin-top: -5px;
         width: 50px;
       }
 
@@ -140,8 +140,5 @@
         }
       }
     }
-  }
-  &.dark-mode {
-    background-color: black;
   }
 }
