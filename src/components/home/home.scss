@@ -20,29 +20,29 @@
     z-index: 1;
 
     @include ipad {
-      flex: 0.7;
-    }
-    @include mobile {
-      flex: 0.7;
+      flex: 0.6;
     }
 
     .imgContainer {
       position: absolute;
       width: 70%;
-      height: 543px;
+      height: 72%;
       left: 50%;
+      top: 15%;
       transform: translateX(-50%);
-      bottom: 60px;
+      
       overflow: hidden;
       border-radius: 10px;
       background-image: linear-gradient($mainColor, lightblue);
       box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.5);
 
       @include ipad {
-        height: 80%;
+        height: 84%;
+        width: 60%;
+        top: 30px;
       }
       @include mobile {
-        height: 80%;
+        height: 84%;
         top: 30px;
       }
 
@@ -64,10 +64,7 @@
     z-index: 1;
 
     @include ipad {
-      flex: 0.3;
-    }
-    @include mobile {
-      flex: 0.3;
+      flex: 0.4;
     }
 
     .wrapper {
@@ -85,7 +82,7 @@
         right: 0px;
       }
       @include mobile {
-        left: 15px;
+        left: 0px;
       }
 
       .intro {
@@ -96,13 +93,12 @@
         z-index: 1;
 
         @include ipad {
-          margin-top: -11%;
-          height: 70%;
+          margin-top: -4%;
           width: 90%;
         }
         @include mobile {
-          margin-top: -18%;
-          height: 80%;
+          margin-top: -30%;
+          // height: 80%;
           width: 100%;
         }
       }
@@ -111,6 +107,20 @@
         width: 80%;
         animation: moveUp 2s;
         margin-left: 10%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @include mobile {
+          width: 98%;
+          margin-left: 1%;
+        }
+
+        @include ipad {
+          width: 98%;
+          margin-left: 1%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
       }
 
       h2 {
@@ -121,22 +131,23 @@
           font-size: 40px;
         }
         @include mobile {
-          font-size: 30px;
+          font-size: 35px;
         }
       }
 
       h3 {
         font-size: 50px;
         font-weight: 300;
-        line-height: 50px;
+        line-height: 60px;
+        text-align: center;
 
         @include ipad {
           font-size: 40px;
           line-height: 60px;
         }
         @include mobile {
-          font-size: 30px;
-          line-height: 30px;
+          font-size: 35px;
+          line-height: 40px;
         }
 
         .dev {
