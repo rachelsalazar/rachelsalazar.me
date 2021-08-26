@@ -18,7 +18,7 @@ export default function Projects() {
         },
         {
           id: '3',
-          title: 'Which Bin?',
+          title: '♻️ Which Bin? 🗑',
           desc: 'A recycling website built with HTML, CSS, and Javascript that helps you figure out if an item should be placed in the Garbage, Recycle Bin, or Compost Bin.',
           technology: ''
         }
