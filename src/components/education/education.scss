@@ -24,14 +24,16 @@
     }
 
     .arrow {
-        height: 70px;
+        height: 150px;
+        margin-top: 80px;
         position: absolute;
         z-index: 0;
         cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏿</text></svg>") 16 0,auto; /*!emojicursor.app*/
     
         &.left {
             left: 100px;
-            animation: arrowBlink 1.5s infinite;
+            height: 105px;
+            // animation: arrowBlink 1.5s infinite;
 
             @include mobile {
               left: 10px;
@@ -42,13 +44,9 @@
             }
         }
 
-        &.left:hover {
-            animation: none;
-        }
-
         &.right {
             right: 100px;
-            animation: arrowBlink 1.5s infinite;
+            // animation: arrowBlink 1.5s infinite;
 
             @include mobile {
               right: 10px;
@@ -59,57 +57,57 @@
             }
         }
 
-        &.right:hover {
-            animation: none;
-        }
-
-        @keyframes arrowBlink {
-            50% {
-                opacity: 20%;
-            }
-        }
+        // @keyframes arrowBlink {
+        //     50% {
+        //         opacity: 0%;
+        //     }
+        // }
     }
 
     .slider {
-        height: 450px;
+        height: 70%;
+        margin-top: 10%;
         display: flex;
         position: absolute;
         left: 0;
         transition: all 0.7s ease-out;
 
+        @include mobile {
+          height: 90%;
+        }
+
         .container {
             width: 100vw;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
             .item {
-                width: 700px;
+                width: 50%;
                 height: 90%;
                 background-color: white;
                 border-radius: 20px;
                 display: flex;
-                align-items: center;
-                justify-content: center;
                 flex-direction: column;
                 box-shadow: 0 0 25px 1px rgba(173, 173, 173, 0.5);
                 z-index: 1;
 
                 @include mobile {
-                  width: 65%;
-                  height: 80%;
+                  width: 90%;
+                  height: 75%;
                   margin-top: 50px;
                 }
 
                 @include ipad {
-                  width: 65%;
-                  height: 80%;
-                  margin-top: 50px;
+                  width: 75%;
+                  height: 90%;
+                  margin-top: 20px;
                 }
             }
 
             .top {
-                flex: 4;
+                flex: 3;
                 height: 100%;
                 display: flex;
                 align-items: center;
@@ -125,23 +123,22 @@
             }
 
             .bottom {
-                flex: 8;
+                flex: 9;
                 height: 100%;
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                justify-content: center;
 
                 h3 {
-                    font-weight: 400;
+                    font-size: 20px;
+                    font-weight: 300;
                     height: 50px;
                     text-align: center;
                     padding-left: 5px;
                     padding-right: 5px;
-                    margin-top: -100px;
 
                     @include mobile {
-                      height: 120px;
+                      height: 70px;
                       margin-top: 0px;
                     }
 
