@@ -18,8 +18,8 @@ function App() {
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} darkMode={darkMode}/>
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} darkMode={darkMode}/>
       <div className="sections">
-        <Home />
-        <Projects darkMode={darkMode} setDarkMode={setDarkMode}/>
+        {/* <Home /> */}
+        {/* <Projects darkMode={darkMode} setDarkMode={setDarkMode}/> */}
         <Education darkMode={darkMode} setDarkMode={setDarkMode}/>
         <Skills />
         <Contact />
