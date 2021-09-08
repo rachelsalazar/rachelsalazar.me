@@ -56,7 +56,7 @@ export default function Contact() {
             <input type="text" name="from_name" placeholder="Name" value={toSend.from_name} onChange={handleChange}/>
             <input type="text" name= "reply_to" placeholder="Email" value={toSend.reply_to} onChange={handleChange} />
             <textarea type="text" name="message" placeholder="Message" value={toSend.message} onChange={handleChange}></textarea>
-            <button type="submit">S E N D</button>
+            <button type="submit">Send</button>
           </form>
         }
         <footer>
