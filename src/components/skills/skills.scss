@@ -3,7 +3,7 @@
 .skills {
   background-color: white;
   color: black;
-  height: calc(100vh);
+  // height: calc(100vh);
 
   h1 {
     font-size: 50px;
@@ -21,18 +21,33 @@
   }
 
   .skills-container {
-    width: 70%;
+    width: 90%;
     margin: auto;
-
+    margin-bottom: 50px;
   }
 
-  img {
-    width: 10%;
-    height: 10%;
+  .skill {
+    display: inline-block;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 0 15px 0.5px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    text-align: center;
+
+    img {
+      height: 100px;
+      width: 120px;
+
+      @include mobile {
+        height: 80px;
+        width: 100px;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+    }
   }
 }

@@ -1,6 +1,8 @@
 import { useState, } from 'react';
 import "./education.scss";
 import Reveal from 'react-reveal/Reveal';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 export default function Education() {
   
@@ -58,8 +60,8 @@ export default function Education() {
                 </div>
                 ))}
             </div>
-            {currentSlide > 0 && <img src="assets/left.png" className="arrow left" alt="Left arrow" onClick={() => handleClick("left")}/>}
-            {currentSlide < 2 && <img src="assets/right.png" className="arrow right" alt="Right arrow" onClick={() => handleClick("right")}/>}
+            <ArrowBackIcon className="arrow left" alt="Left arrow" onClick={() => handleClick("left")}/>
+            <ArrowForwardIcon src="assets/right.png" className="arrow right" alt="Right arrow" onClick={() => handleClick("right")}/>
         </div>
       </Reveal>
     )

@@ -24,44 +24,48 @@
     }
 
     .arrow {
-        height: 150px;
-        margin-top: 80px;
+        font-size: 60px;
+        color: lightblue;
+        margin-top: 100px;
         position: absolute;
         z-index: 0;
         cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏿</text></svg>") 16 0,auto; /*!emojicursor.app*/
-    
+
+        @include mobile {
+          margin-top: calc(85vh);
+        }
+
         &.left {
             left: 100px;
-            height: 105px;
-            // animation: arrowBlink 1.5s infinite;
+            animation: arrowBlink 1.5s infinite;
 
             @include mobile {
-              left: 10px;
+              left: 80px;
             }
 
             @include ipad {
-              left: 30px;
+              left: 10px;
             }
         }
 
         &.right {
             right: 100px;
-            // animation: arrowBlink 1.5s infinite;
+            animation: arrowBlink 1.5s infinite;
 
             @include mobile {
-              right: 10px;
+              right: 80px;
             }
 
             @include ipad {
-              right: 30px;
+              right: 10px;
             }
         }
 
-        // @keyframes arrowBlink {
-        //     50% {
-        //         opacity: 0%;
-        //     }
-        // }
+        @keyframes arrowBlink {
+            50% {
+                opacity: 0%;
+            }
+        }
     }
 
     .slider {
@@ -73,7 +77,7 @@
         transition: all 0.7s ease-out;
 
         @include mobile {
-          height: 90%;
+          height: 80%;
         }
 
         .container {
