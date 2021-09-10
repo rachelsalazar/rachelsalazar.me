@@ -3,7 +3,9 @@
 .skills {
   background-color: white;
   color: black;
-  // height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+
 
   h1 {
     font-size: 50px;
@@ -21,9 +23,13 @@
   }
 
   .skills-container {
-    width: 90%;
+    width: 70%;
     margin: auto;
     margin-bottom: 50px;
+
+    @include mobile {
+      width: 90%;
+    }
   }
 
   .skill {
@@ -32,13 +38,13 @@
     padding: 10px;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 0 15px 0.5px rgba(0, 0, 0, 0.5);
+    border: 3px solid lightgreen;
     font-weight: 300;
     text-align: center;
 
     img {
       height: 100px;
-      width: 120px;
+      width: 100px;
 
       @include mobile {
         height: 80px;
