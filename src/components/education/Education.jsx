@@ -1,8 +1,6 @@
 import { useState, } from 'react';
 import "./education.scss";
 import Reveal from 'react-reveal/Reveal';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 export default function Education() {
   
@@ -38,12 +36,12 @@ export default function Education() {
     }
 
     return (
-      <Reveal>
-        <div className="education" id="education">
-            <h1>Education</h1>
-            <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw)`}}>
-                {data.map((d) => (
-                    <div className="container">
+      <div className="education" id="education">
+          <h1>Education</h1>
+          <div className="slider">
+              {data.map((d) => (
+                  <div className="container">
+                  <Reveal>
                     <div className="item">
                         <div className="top">
                             <div className="leftContainter">
@@ -57,12 +55,10 @@ export default function Education() {
                             <p>{d.desc}</p>
                         </div>
                     </div>
-                </div>
-                ))}
-            </div>
-            <ArrowBackIcon className="arrow left" alt="Left arrow" onClick={() => handleClick("left")}/>
-            <ArrowForwardIcon src="assets/right.png" className="arrow right" alt="Right arrow" onClick={() => handleClick("right")}/>
-        </div>
-      </Reveal>
+                  </Reveal>
+              </div>
+              ))}
+          </div>
+      </div>
     )
 }

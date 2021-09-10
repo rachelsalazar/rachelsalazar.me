@@ -8,7 +8,6 @@
     justify-content: center;
     position: relative;
     z-index: 0;
-    height: calc(100vh - 75px);
     transition: all 0.7s ease;
 
     h1 {
@@ -23,79 +22,26 @@
         }
     }
 
-    .arrow {
-        font-size: 60px;
-        color: lightblue;
-        margin-top: 100px;
-        position: absolute;
-        z-index: 0;
-        cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👆🏿</text></svg>") 16 0,auto; /*!emojicursor.app*/
-
-        @include mobile {
-          margin-top: calc(85vh);
-        }
-
-        &.left {
-            left: 100px;
-            animation: arrowBlink 1.5s infinite;
-
-            @include mobile {
-              left: 80px;
-            }
-
-            @include ipad {
-              left: 10px;
-            }
-        }
-
-        &.right {
-            right: 100px;
-            animation: arrowBlink 1.5s infinite;
-
-            @include mobile {
-              right: 80px;
-            }
-
-            @include ipad {
-              right: 10px;
-            }
-        }
-
-        @keyframes arrowBlink {
-            50% {
-                opacity: 0%;
-            }
-        }
-    }
-
     .slider {
-        height: 70%;
-        margin-top: 10%;
+        margin-top: 150px;
         display: flex;
-        position: absolute;
-        left: 0;
-        transition: all 0.7s ease-out;
-
-        @include mobile {
-          height: 80%;
-        }
+        flex-direction: column;
 
         .container {
-            width: 100vw;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
             .item {
-                width: 50%;
-                height: 90%;
+                width: 40%;
                 background-color: white;
                 border-radius: 20px;
                 display: flex;
                 flex-direction: column;
-                box-shadow: 0 0 25px 1px rgba(173, 173, 173, 0.5);
+                border: 3px solid lightblue;
+                margin: 25px;
                 z-index: 1;
+                padding: 50px;
 
                 @include mobile {
                   width: 90%;
@@ -119,6 +65,7 @@
 
                 img {
                     width: 270px;
+                    margin-bottom: 10px;
 
                     @include mobile {
                       width: 200px;

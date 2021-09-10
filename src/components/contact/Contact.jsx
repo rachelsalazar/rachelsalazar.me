@@ -4,6 +4,7 @@ import { send } from 'emailjs-com';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import Reveal from 'react-reveal/Reveal';
 
 import keys from '../../env/config/prod';
 
@@ -49,6 +50,7 @@ export default function Contact() {
       <div className="contact" id="contact">
         <h1>Contact ✍🏼</h1>
         <p>{message}</p>
+        <Reveal>
         {submitEmail ? 
           ""
           :
@@ -59,6 +61,7 @@ export default function Contact() {
             <button type="submit">Send</button>
           </form>
         }
+        </Reveal>
         <footer>
           <div class="icons">
             <a href="https://www.linkedin.com/in/rachel-e-salazar/" target="blank"><LinkedInIcon /></a>
