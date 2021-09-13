@@ -18,13 +18,13 @@ export default function Home() {
             </div>
             <div className="right">
                 <div className="wrapper">
-                  <span className="intro">
-                    <h2>I'm</h2>
+                  <h1 className="intro">
+                    <span className="im">I'm</span>
                     <span className="drop-shadow">
                       <img className="rachel" src="assets/rachel-salazar.png" alt="" />
                     </span>
-                    <h3>a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre>👩🏼‍💻</pre> : <span>Developer.</span>}</span></h3>
-                  </span>            
+                    <span className="desc">a Front-End <span onClick={handleClick} className="dev"> {isClicked ? <pre>👩🏼‍💻</pre> : <span>Developer.</span>}</span></span>
+                  </h1>            
                 </div>
             </div>
         </div>
