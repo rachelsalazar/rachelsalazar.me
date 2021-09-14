@@ -35,6 +35,7 @@ export default function Projects() {
                   </div>
                 </Zoom>                
                 <p>{data[0].desc}</p>
+                <a href="https://github.com/rachelsalazar/local-weather-app" target="blank">GitHub Repository</a>
                 <Zoom>
                   <h2>{data[1].title}</h2>
                   <div className="item to-do">
@@ -42,6 +43,7 @@ export default function Projects() {
                   </div>
                 </Zoom>                
                 <p>{data[1].desc}</p>
+                <a href="https://github.com/rachelsalazar/keeper" target="blank">GitHub Repository</a>
                 <Zoom>
                   <h2>{data[2].title}</h2>
                   <div className="item which-bin">
@@ -49,6 +51,7 @@ export default function Projects() {
                   </div>                  
                 </Zoom>                
                 <p>{data[2].desc}</p>
+                <a href="https://github.com/fordf/RecyclingFinalProject" target="blank">GitHub Repository</a>
             </div>
         </div>
     )
