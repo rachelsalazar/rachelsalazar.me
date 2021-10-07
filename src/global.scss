@@ -1,7 +1,8 @@
-$mainColor: #fadd76;
+$color-tan: rgb(231, 229, 225);
+$color-brown: rgb(145, 117, 66);
 
-$mobileWidth: 539px;
-$ipadWidth: 769px;
+$width-mobile: 539px;
+$width-ipad: 769px;
 
 @keyframes fadeIn {
   0% {
@@ -13,13 +14,13 @@ $ipadWidth: 769px;
 }
 
 @mixin mobile {
-  @media (max-width:#{$mobileWidth}) {
+  @media (max-width:#{$width-mobile}) {
     @content
   }
 }
 
 @mixin ipad {
-  @media (min-width: 540px) and (max-width:#{$ipadWidth}) {
+  @media (max-width:#{$width-ipad}) {
     @content
   }
 }

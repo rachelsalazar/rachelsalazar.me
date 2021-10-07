@@ -1,16 +1,22 @@
+* {
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .app {
 
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+
     .sections {
-        width: 100%;
         position: relative;
-        top: 75px;
         scrollbar-width: none; //for firefox
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+
         &::-webkit-scrollbar{
             display: none; //other browsers
-        }
-
-        > *{
-            width: 100%;
         }
     }
 }
